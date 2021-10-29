@@ -1,9 +1,10 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-     
+     <h1>This is travelo</h1>
     </div>
   );
 }
