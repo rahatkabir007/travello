@@ -1,0 +1,29 @@
+.destination-slider {
+    height: 600px;
+}
+.carousel-caption{
+       position: absolute;
+       bottom: 30%;
+       left: 18%;
+       width: 65%;
+        padding: 40px 0;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        font-weight: bold;
+        border: 5px solid #fff;
+}
+.carousel-caption h5 {
+    color: white;
+    font-size: 50px;
+}
+.carousel-caption p{
+     color: white;
+     font-size: 30px;
+}
+/* Mobile device */
+@media only screen and (max-width:688px){
+    .destination-slider {
+        height: 100%;
+    }
+}

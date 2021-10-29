@@ -1,0 +1,19 @@
+.header-area{
+    font-size: 25px; 
+}
+.title-area img{
+    width: 65%;
+}
+.navbar{
+    background-color: #F9F9F9;
+   
+}
+.navbar ul li a{
+    margin-left: 10px;
+    font-weight: 500;
+    color: black !important;
+     border-bottom: 1px solid transparent;
+}
+.navbar ul li a:hover{
+    border-bottom: 1px solid #00827b;
+}
