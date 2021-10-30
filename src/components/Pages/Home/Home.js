@@ -2,24 +2,28 @@ import React from 'react';
 import Destination from '../Destination/Destination';
 import Banner from '../Home/Banner/Banner';
 import HomeServices from './HomeServices/HomeServices';
-import Header from '../Shared/Header/Header';
 import Facilities from './Facilities/Facilities';
 import HomeAbout from './HomeAbout/HomeAbout';
 import Review from './Review/Review';
-import Footer from './../Shared/Footer/Footer';
+import Header from '../Shared/Header/Header';
+
 
 
 const Home = () => {
     return (
         <div>
-            <Header></Header>
+            <div className="header-area">
+                <nav className="navbar navbar-expand-lg fixed-top py-4">
+                    <Header></Header>
+                </nav>
+            </div>
+
             <Banner></Banner>
             <HomeAbout></HomeAbout>
             <Facilities></Facilities>
             <Destination></Destination>
             <HomeServices></HomeServices>
             <Review></Review>
-            <Footer></Footer>
         </div>
     );
 };

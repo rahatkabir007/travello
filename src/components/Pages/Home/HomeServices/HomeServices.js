@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Service from './service/Service';
+import './HomeServices.css';
 
-const HomeServices = () => {
+const Services = () => {
+    const [services, setServices] = useState([]);
+    useEffect(() => {
+        fetch('services.json')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
     return (
-        <div>
-            <h1>This is service</h1>
+        <div className="services-section" id="services">
+            <h1 className="text-center">Our Services</h1>
+            <hr />
+            <div className="container">
+                <div className="row">
+                    {
+                        services.map(service => <Service key={service.key} service={service}></Service>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };
 
-export default HomeServices;
+export default Services;

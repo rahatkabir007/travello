@@ -19,11 +19,11 @@ const Review = () => {
                                 <h2>Sara Geller</h2>
                                 <p>Travelo Is Really Good,The Tour Guides Are Really Helpfull</p>
                                 <div className="rating w-50 mx-auto text-center p-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="far fa-star"></i>
                                 </div>
                             </div>
                             <div className="col-lg-3 review-details p-5  mx-auto h-75 my-auto" id="right-detail">
@@ -45,18 +45,18 @@ const Review = () => {
                                 <h2>Rishab Kapoor</h2>
                                 <p>Travelo Is Really Good,The Tour Guides Are Really Helpfull</p>
                                 <div className="rating w-50 mx-auto text-center p-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="far fa-star"></i>
                                 </div>
                             </div>
                             <div className="col-lg-3 review-details p-5 mx-auto h-75 my-auto" id="right-detail">
                                 <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="d-block w-100 mx-auto" alt="..." />
                                 <h2>John Kim</h2>
                                 <p>Travelo Is Really Good,The Tour Guides Are Really Helpfull</p>
-                               
+
                             </div>
                         </div>
 
@@ -73,11 +73,11 @@ const Review = () => {
                                 <h2>John Kim</h2>
                                 <p>Travelo Is Really Good,The Tour Guides Are Really Helpfull</p>
                                 <div className="rating w-50 mx-auto text-center p-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="far fa-star"></i>
                                 </div>
                             </div>
                             <div className="col-lg-3 review-details p-5 mx-auto h-75 my-auto" id="right-detail">

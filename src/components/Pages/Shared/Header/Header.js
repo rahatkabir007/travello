@@ -1,42 +1,60 @@
 import React from 'react';
 import './Header.css';
 import logo from '../../../images/logo.png';
+import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
+import { Nav, Navbar } from 'react-bootstrap';
 const Header = () => {
+    const { user, logOut } = useAuth();
     return (
-        <div className="header-area">
-            <nav class="navbar navbar-expand-lg fixed-top  py-4">
-                <div class="container">
-                    <div className="title-area">
-                        <img src={logo} alt="" />
-                   </div>
-                    <button class="navbar-toggler ms-auto p-3 mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-                      <span className="fs-3">Menu</span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="/home">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/aboutus">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/services">Services</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="/signin">Sign In/Sign Up</a>
-                            </li>
-                        </ul>
-                            
-                    </div>
-                    <div>
-                  
-                    </div>
+        <>
+            <div className="container">
+                <div className="title-area">
+                    <NavLink to='/'><img src={logo} alt="" /></NavLink>
                 </div>
-            </nav>
-        </div>
+                <button className="navbar-toggler ms-auto p-3 mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+                    <span className="fs-3">Menu</span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/home'>Home</Link>
+
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/aboutus'>About Us</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/services'>Services</Link>
+                        </li>
+                    </ul>
+                    <ul className="navbar-nav mb-2 mb-lg-0">
+                        <li className="nav-item">
+
+                            {user?.email ?
+
+                                <div className="d-lg-flex">
+                                    <Link className="nav-link" to='/signin'>Manage Data</Link>
+                                    <Nav.Link onClick={logOut} to="/home" >Sign Out</Nav.Link>
+                                    <Navbar.Text>
+                                        <p className="mb-0 ms-2">User: {user?.displayName}</p>
+                                    </Navbar.Text>
+                                </div>
+                                :
+
+                                <Link className="nav-link" to='/signin'>Sign In</Link>
+
+                            }
+                        </li>
+                    </ul>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+        </>
     );
 };
 
