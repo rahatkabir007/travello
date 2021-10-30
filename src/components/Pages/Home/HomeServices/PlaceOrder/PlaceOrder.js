@@ -14,7 +14,7 @@ const PlaceOrder = () => {
         formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
-         
+         console.log(data);
      }
     useEffect(() => {
         fetch(`http://localhost:5000/services/${serviceId}`)
@@ -38,14 +38,17 @@ const PlaceOrder = () => {
                         <div className="image-area my-3 w-75 ms-auto" >
                             <img className="w-100 ms-auto mt-5" src={serviceDetails?.image} alt="" />
                         </div>
-                        <div className="text-area w-75 ms-auto">
+                        <div className="text-area w-75 ms-auto mb-5">
                             <h1>{serviceDetails?.location}</h1>
                             <p>{serviceDetails?.description}</p>
+                            <p style={{fontSize: "30px"}}>Price: {serviceDetails?.price}$</p>
+                            <p>Image URL</p>
+                            <input type="text" name="" id="" value={serviceDetails?.image} style={{width: "100%"}} className="p-2" />
 
                         </div>
                     </div>
                     <div className="col-lg-7 my-5 right-order-form text-center">
-                        <form onSubmit={handleSubmit(onSubmit)} className="ms-auto">
+                        <form onSubmit={handleSubmit(onSubmit)} className="ms-auto mt-3">
                             <input
                                 {...register("name")}
                                 value={user?.displayName}
@@ -53,19 +56,18 @@ const PlaceOrder = () => {
                             />
                             <input
                                 {...register("email")}
-                              value={user?.email}
+                                value={user?.email}
                                 className="p-2 m-2 w-100"
                             />
                             <input
                                 {...register("location")}
-                                value={serviceDetails?.location}
-                                placeholder="Location"
+                                placeholder="Please Type The Location"
                                 className="p-2 m-2 w-100"
                             />
                             <input
                                 {...register("price")}
-                                value={serviceDetails?.price}
-                                placeholder="Price"
+                                placeholder="Please Type The Price"
+                                type="number"
                                 className="p-2 m-2 w-100"
                             />
                             <input
@@ -85,13 +87,19 @@ const PlaceOrder = () => {
                                 className="p-2 m-2 w-100"
                             />
                             <input
-                                {...register("image", { required: true })}
-                               value={serviceDetails?.image}
+                                {...register("image")}
+                                placeholder="Please Paste The Image URL"
                                 className="p-2 m-2 w-100"
                             />
+                            <input
+                                {...register("status")}
+                                value= "Pending"
+                                className="p-2 m-2 w-100"
+                            />
+                            
                          
                             <br/>
-                            {errors.exampleRequired && <span>This field is required</span>}
+                       
 
                             <input type="submit" value="Place Order" className="btn btn-dark w-25 ms-2 my-3" id="place-order-btn" />
                         </form>
