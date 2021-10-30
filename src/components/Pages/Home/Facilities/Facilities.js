@@ -30,13 +30,13 @@ const Facilities = () => {
     ]
     return (
         <div className="mt-3 facilities-section container">
-            <h1 className="text-center">Our Facilities</h1>
+            <h1 className="text-center my-3">Our Facilities</h1>
             <hr />
             <div className="row my-2">
                 {
 
-                    facilities.map(facility => <div className="col-md-6 col-lg-6 col-xxl-3 facility-section mt-2">
-                        <div className="card facility-card h-100 mx-auto " style={{ width: "18rem" }}>
+                    facilities.map(facility => <div className="col-md-6 col-lg-6 col-xxl-3 facility-section my-3">
+                        <div className="card facility-card h-100 mx-auto  " style={{ width: "18rem" }}>
                             <img src={facility.img} className="card-img-top h-50" alt="..." />
                             <div className="card-body text-center facility-text">
                                 <h2 className="card-title  ">{facility.name}</h2>

@@ -4,7 +4,7 @@ import logo from '../../../images/logo.png';
 const Header = () => {
     return (
         <div className="header-area">
-            <nav class="navbar navbar-expand-lg  py-4">
+            <nav class="navbar navbar-expand-lg fixed-top  py-4">
                 <div class="container">
                     <div className="title-area">
                         <img src={logo} alt="" />

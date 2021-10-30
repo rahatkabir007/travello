@@ -42,8 +42,8 @@
 /* Mobile device */
 @media only screen and (max-width:688px) {
    .banner-text{
-        position: relative;
-        top: 45%;
+        position: absolute;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 5;

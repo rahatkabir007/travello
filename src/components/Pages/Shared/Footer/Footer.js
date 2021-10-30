@@ -19,8 +19,8 @@ const Footer = () => {
                     <ul>
                         <li className="text-center">Contact Us</li>
                         <li><i className="fas fa-phone"></i>  +88018942323324</li>
-                        <li><i className="fas fa-envelope-open"></i>  fitfreak@gmail.com</li>
-                        <li><i className="fas fa-address-card"></i>  24 Street, California,USA</li>
+                        <li><i className="fas fa-envelope-open"></i>  travelo@gmail.com</li>
+                        <li><i className="fas fa-address-card"></i> 19 No. Mothijil, Dhaka</li>
                     </ul>
 
                 </div>
