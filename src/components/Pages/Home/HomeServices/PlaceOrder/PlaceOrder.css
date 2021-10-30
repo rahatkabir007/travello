@@ -3,16 +3,13 @@
 }
 
 .placeOrder-section {
-    background-image: url("https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
+    background-color: #00827b;
+    height: 50vh;
 }
 .placeOrder-section h1 {
     color: white;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
@@ -32,4 +29,22 @@
 }
 #place-order-btn{
     width: 25% !important;
+}
+
+@media only screen and (max-width:688px){
+    .placeOrder-section h1{
+        top: 35%;
+    }
+    .left-order-details{
+        text-align: left !important;
+        margin: 0px !important;
+    }
+    .image-area {
+        margin: 15px 0px !important;
+        
+    }
+    .text-area {
+        margin: 0px !important;
+        
+    }
 }

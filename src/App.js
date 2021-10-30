@@ -22,7 +22,7 @@ function App() {
             <Route path='/home'>
               <Home></Home>
             </Route>
-            <PrivateRoute path="/placeOrder/:serviceKey">
+            <PrivateRoute path="/services/:serviceId">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
             <PrivateRoute path="/addService">

@@ -18,7 +18,7 @@ const Review = () => {
                                 <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="d-block w-100 mx-auto " alt="..." />
                                 <h2>Sara Geller</h2>
                                 <p>Travelo Is Really Good,The Tour Guides Are Really Helpfull</p>
-                                <div className="rating w-50 mx-auto text-center p-2">
+                                <div className="rating w-50 mx-auto text-center ">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -44,7 +44,7 @@ const Review = () => {
                                 <img src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="d-block w-100 mx-auto " alt="..." />
                                 <h2>Rishab Kapoor</h2>
                                 <p>Travelo Is Really Good,The Tour Guides Are Really Helpfull</p>
-                                <div className="rating w-50 mx-auto text-center p-2">
+                                <div className="rating w-50 mx-auto text-center ">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -72,7 +72,7 @@ const Review = () => {
                                 <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="d-block w-100 mx-auto" alt="..." />
                                 <h2>John Kim</h2>
                                 <p>Travelo Is Really Good,The Tour Guides Are Really Helpfull</p>
-                                <div className="rating w-50 mx-auto text-center p-2">
+                                <div className="rating w-50 mx-auto text-center">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
@@ -88,12 +88,12 @@ const Review = () => {
                         </div>
                     </div>
                 </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
+                <button className="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon bg-dark " aria-hidden="true"></span>
+                    <span  className="visually-hidden ">Previous</span>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
