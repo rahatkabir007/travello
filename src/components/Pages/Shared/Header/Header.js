@@ -34,7 +34,9 @@ const Header = () => {
                             {user?.email ?
 
                                 <div className="d-lg-flex">
-                                    <Link className="nav-link" to='/signin'>Manage Data</Link>
+                                    <Link className="nav-link" to='/addService'>Add Service</Link>
+                                    <Link className="nav-link" to='/myOrders'>My Orders</Link>
+                                    <Link className="nav-link" to='/manageOrders'>Manage Orders</Link>
                                     <Nav.Link onClick={logOut} to="/home" >Sign Out</Nav.Link>
                                     <Navbar.Text>
                                         <p className="mb-0 ms-2">User: {user?.displayName}</p>

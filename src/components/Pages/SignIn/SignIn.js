@@ -27,8 +27,17 @@ const SignIn = () => {
                 </nav>
             </div>
             <div className="signin-section">
-                <h1>This is sign in</h1>
-                <button onClick={handleGoogleSignIn} className="btn btn-dark">Google Login</button>
+                <div className="row w-75 mx-auto signin-area-section">
+                    <div className="col-lg-8 w-50 mx-auto signin-left">
+                        <img className="w-75 mx-auto" src="https://images.pexels.com/photos/9975988/pexels-photo-9975988.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+                    </div>
+                    <div className="col-lg-4 w-50 ms-auto h-75 my-auto signin-right">
+                        <h1>Sign in</h1>
+                        <hr/>
+                        <button onClick={handleGoogleSignIn} className="btn signin-btn"><i className="fab fa-google me-2"></i>Sign in with Google</button>
+                    </div>
+                </div>
+               
 
 
 

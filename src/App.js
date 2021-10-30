@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './components/context/AuthProvider';
+import AddService from './components/Pages/AddService/AddService';
 import Home from './components/Pages/Home/Home';
 import PlaceOrder from './components/Pages/Home/HomeServices/PlaceOrder/PlaceOrder';
 import NotFound from './components/Pages/notFound/NotFound';
@@ -23,6 +24,9 @@ function App() {
             </Route>
             <PrivateRoute path="/placeOrder/:serviceKey">
               <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
+            <PrivateRoute path="/addService">
+             <AddService></AddService>
             </PrivateRoute>
             <Route path='/signin'>
               <SignIn></SignIn>
