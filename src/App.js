@@ -3,7 +3,7 @@ import './App.css';
 import AuthProvider from './components/context/AuthProvider';
 import AddService from './components/Pages/AddService/AddService';
 import Home from './components/Pages/Home/Home';
-import AboutUs from './components/Pages/AboutUs/AboutUs';
+// import AboutUs from './components/Pages/AboutUs/AboutUs';
 import PlaceOrder from './components/Pages/Home/HomeServices/PlaceOrder/PlaceOrder';
 import ManageOrder from './components/Pages/ManageOrder/ManageOrder';
 import MyOrders from './components/Pages/MyOrders/MyOrders';
@@ -13,6 +13,7 @@ import PrivateRoute from './components/Pages/SignIn/PrivateRoute/PrivateRoute';
 import SignIn from './components/Pages/SignIn/SignIn';
 import MainServices from './components/Pages/MainServices/MainServices';
 import Header from './components/Pages/Shared/Header/Header';
+import About from './components/Pages/About/About';
 
 function App() {
   return (
@@ -27,8 +28,8 @@ function App() {
             <Route path='/home'>
               <Home></Home>
             </Route>
-            <Route path='/aboutus'>
-              <AboutUs></AboutUs>
+            <Route path='/about'>
+              <About></About>
             </Route>
             <Route path='/mainServices'>
               <MainServices></MainServices>
