@@ -12,12 +12,14 @@ import Footer from './components/Pages/Shared/Footer/Footer';
 import PrivateRoute from './components/Pages/SignIn/PrivateRoute/PrivateRoute';
 import SignIn from './components/Pages/SignIn/SignIn';
 import MainServices from './components/Pages/MainServices/MainServices';
+import Header from './components/Pages/Shared/Header/Header';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
+          <Header></Header>
           <Switch>
             <Route exact path='/'>
               <Home></Home>

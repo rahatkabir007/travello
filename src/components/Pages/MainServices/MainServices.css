@@ -1,6 +1,6 @@
 .main-services-intro-section {
     background-color: #00827b;
-    height: 50vh;
+    height: 40vh;
 }
 
 .main-services-intro-section h1 {
@@ -18,6 +18,10 @@
     border: 5px solid #fff;
     letter-spacing: 5px;
 }
-.main-services-section{
-    background-color: #FDFAF6 !important;
+/* Mobile device */
+@media only screen and (max-width:688px){
+    .main-services-intro-section h1{
+        position: relative;
+        top: 45%;
+    }
 }

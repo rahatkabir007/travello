@@ -1,6 +1,6 @@
 .my-orders-intro-section {
     background-color: #00827b;
-    height: 50vh;
+    height: 40vh;
 }
 
 .my-orders-intro-section h1 {
@@ -17,4 +17,19 @@
     font-weight: bold;
     border: 5px solid #fff;
     letter-spacing: 5px;
+}
+.cancel-order-btn{
+   padding: 10px 18px;
+   border-radius: 5px;
+   background-color: #00827b;
+   font-size: 20px;
+   color: white;
+   border: none;
+}
+/* Mobile device */
+@media only screen and (max-width:688px){
+    .my-orders-intro-section h1{
+        position: relative;
+        top: 44%;
+    }
 }

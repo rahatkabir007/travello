@@ -9,7 +9,7 @@
      
 }
 .banner-text{
-    position: absolute;
+    position: relative;
     top: 25%;
     left: 65%;
     line-height: 36px;
@@ -41,13 +41,16 @@
 
 /* Mobile device */
 @media only screen and (max-width:688px) {
+    .banner-area{
+        height: 65vh;
+    }
    .banner-text{
-        position: absolute;
-        top: 55%;
+        position: relative;
+        top: 52%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 5;
-        width: 65%;
+        width: 75%;
         padding: 40px 0;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.3);

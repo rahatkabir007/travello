@@ -19,5 +19,14 @@
      border-bottom: 1px solid transparent;
 }
 .navbar ul li a:hover{
+    transition: 0.3s;
+    color: #00827b !important;
     border-bottom: 1px solid #00827b;
+}
+/* Mobile device */
+@media only screen and (max-width:688px){
+    .title-area{
+        width: 50%;
+    }
+ 
 }

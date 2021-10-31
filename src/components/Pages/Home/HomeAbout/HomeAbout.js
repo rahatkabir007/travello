@@ -3,7 +3,7 @@ import './HomeAbout.css';
 const HomeAbout = () => {
     return (
         <div className="container my-5">
-            <div className="homeabout-container row gx-5">
+            <div className="homeabout-container row">
                 <div className="homeabout-left-area col-lg-6 ">
                     <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div className="carousel-inner ">

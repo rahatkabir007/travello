@@ -9,19 +9,19 @@ const PlaceOrder = () => {
     const { user } = useAuth();
     const [serviceDetails, setServiceDetails] = useState([]);
     const { serviceId } = useParams();
-    const {register,handleSubmit,reset} = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         console.log(data);
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://gentle-coast-30847.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Your Order Has Been Booked");
                     reset();
                 }
             })
-     }
+    }
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://gentle-coast-30847.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setServiceDetails(data));
     }, [])
@@ -45,7 +45,7 @@ const PlaceOrder = () => {
                         <div className="text-area w-75 ms-auto mb-5">
                             <h1>{serviceDetails?.location}</h1>
                             <p>{serviceDetails?.description}</p>
-                            <p style={{fontSize: "30px"}}>Price: {serviceDetails?.price}$</p>
+                            <p style={{ fontSize: "30px" }}>Price: {serviceDetails?.price}$</p>
                         </div>
                     </div>
                     <div className="col-lg-7 my-5 right-order-form text-center">
@@ -84,29 +84,29 @@ const PlaceOrder = () => {
                                 placeholder="Please Type Your Phone Number"
                                 className="p-2 m-2 w-100"
                             />
-                        
+
                             <input
                                 {...register("date")}
-                               
+
                                 defaultValue={new Date()}
                                 className="p-2 m-2 w-100"
                             />
                             {
                                 serviceDetails.name && <input
-                                {...register("image")}
-                                defaultValue={serviceDetails?.image}
-                                className="p-2 m-2 w-100"
-                            />
+                                    {...register("image")}
+                                    defaultValue={serviceDetails?.image}
+                                    className="p-2 m-2 w-100"
+                                />
                             }
                             <input
                                 {...register("status")}
-                                value= "Pending"
+                                value="Pending"
                                 className="p-2 m-2 w-100"
                             />
-                            
-                            
-                            <br/>
-                       
+
+
+                            <br />
+
 
                             <input type="submit" value="Place Order" className="btn btn-dark w-25 ms-2 my-3" id="place-order-btn" />
                         </form>

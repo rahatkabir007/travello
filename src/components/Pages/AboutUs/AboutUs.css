@@ -1,6 +1,6 @@
 .aboutus-intro-section {
     background-color: #00827b;
-    height: 50vh;
+    height: 40vh;
 }
 .aboutus-intro-section h1 {
     color: white;
@@ -16,4 +16,11 @@
     font-weight: bold;
     border: 5px solid #fff;
     letter-spacing: 5px;
+}
+/* Mobile device */
+@media only screen and (max-width:688px){
+.aboutus-intro-section h1{
+     position: relative;
+     top: 45%;
+}
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import initializeAuthentication from '../../Firebase/Firebase.init';
 import useAuth from '../../hooks/useAuth';
-import Header from '../Shared/Header/Header';
 import './SignIn.css';
 
 initializeAuthentication();
@@ -21,11 +20,6 @@ const SignIn = () => {
 
     return (
         <div>
-            <div className="header-area">
-                <nav className="navbar navbar-expand-lg py-4">
-                    <Header></Header>
-                </nav>
-            </div>
             <div className="signin-section">
                 <div className="row w-75 mx-auto signin-area-section">
                     <div className="col-lg-8 w-50 mx-auto signin-left">

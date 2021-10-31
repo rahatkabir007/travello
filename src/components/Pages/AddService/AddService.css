@@ -1,10 +1,6 @@
-/* .placeOrder {
-    margin-bottom: -14px;
-} */
-
 .add-service-section {
     background-color: #00827b;
-    height: 50vh;
+    height: 40vh;
 }
 
 .add-service-section h1 {
@@ -21,4 +17,34 @@
     font-weight: bold;
     border: 5px solid #fff;
     letter-spacing: 5px;
+}
+#place-order-btn{
+    background-color: #00827b !important;
+    color: white;
+    border: 1px solid grey;
+     border-radius: 10px;
+    
+}
+/* Mobile device */
+@media only screen and (max-width:688px) {
+    .add-service-section h1{
+        position: relative;
+    }
+    .add-form-area{
+        width: 75% !important;
+        margin: 0px;
+    }
+    .add-service-section h1{
+        width: 80%;
+        top: 40%;
+    }
+    .place-order-button-area{
+        margin-left: -20px;
+        width: 100% !important;
+    }
+    #place-order-btn{
+        margin: 15px 20px;
+        width: 100% !important;
+    }
+
 }

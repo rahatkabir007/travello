@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import Header from '../Shared/Header/Header';
 import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth';
 import './AddService.css';
@@ -11,7 +10,7 @@ const AddService = () => {
 
     const onSubmit = (data) => {
         console.log(data);
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://gentle-coast-30847.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Successfully Added");
@@ -21,16 +20,12 @@ const AddService = () => {
     }
     return (
         <div>
-            <div className="header-area">
-                <nav className="navbar navbar-expand-lg fixed-top py-4">
-                    <Header></Header>
-                </nav>
-            </div>
+
             <div className="add-service-section">
                 <h1>Add Your Recommendation</h1>
             </div>
             <div className="container my-4">
-                <form onSubmit={handleSubmit(onSubmit)} className="w-50 mx-auto text-center">
+                <form onSubmit={handleSubmit(onSubmit)} className="w-50 mx-auto text-center add-form-area">
                     <input
                         {...register("name")}
                         defaultValue={user?.displayName}
@@ -42,17 +37,17 @@ const AddService = () => {
                         className="p-2 m-2 w-100"
                     />
                     <input
-                        {...register("location")}
+                        {...register("location", { required: true })}
                         placeholder="Location"
                         className="p-2 m-2 w-100"
                     />
                     <textarea
-                        {...register("description")}
+                        {...register("description", { required: true })}
                         placeholder="Description"
                         className="p-2 m-2 w-100"
                     />
                     <input
-                        {...register("price")}
+                        {...register("price", { required: true })}
                         placeholder="Price"
                         className="p-2 m-2 w-100"
                     />
@@ -65,7 +60,9 @@ const AddService = () => {
                     <br />
                     {errors.exampleRequired && <span>This field is required</span>}
 
-                    <input type="submit" value="ADD" className="btn btn-dark w-25 ms-2 my-3" id="place-order-btn" />
+                    <div className="place-order-button-area">
+                        <input type="submit" value="ADD" className=" ms-2 my-3" id="place-order-btn" />
+                    </div>
                 </form>
             </div>
 

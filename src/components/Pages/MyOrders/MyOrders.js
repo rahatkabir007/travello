@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
-import Header from '../Shared/Header/Header';
 import './MyOrders.css';
 const MyOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://gentle-coast-30847.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
+    if (orders.length <= 0) {
+        return <div className="w-25 mx-auto text-center"><Spinner className="my-5 " animation="border" variant="success" /></div>
+    }
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to cancel your order?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://gentle-coast-30847.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -27,17 +30,12 @@ const MyOrders = () => {
                     }
                 })
         }
-       
+
     }
 
     const matched = orders.filter(order => order.email === user.email);
     return (
         <div>
-            <div className="header-area">
-                <nav className="navbar navbar-expand-lg fixed-top py-4">
-                    <Header></Header>
-                </nav>
-            </div>
             <div className="my-orders-intro-section">
                 <h1>My Orders</h1>
             </div>
@@ -45,7 +43,7 @@ const MyOrders = () => {
                 <div className="row">
                     {
                         matched.map(order => <div className="col-md-6 col-lg-6 col-xxl-4 service-section mt-3">
-                            <div className="card service-card h-100 mx-auto " style={{ width: "25rem" }}>
+                            <div className="card service-card h-100 mx-auto " style={{ width: "18rem" }}>
                                 <img src={order?.image} className="card-img-top " style={{ height: "15rem" }} alt="..." />
                                 <div className="card-body text-center service-text">
                                     <h2 className="card-title">{order?.location}</h2>
@@ -53,7 +51,7 @@ const MyOrders = () => {
                                     <p className="card-text" id="price">Price:  {order?.price}$</p>
                                 </div>
                                 <div className="text-center p-3">
-                                    <button className="btn btn-dark" onClick={() => handleDelete(order?._id)}>Cancel Order</button>
+                                    <button className="cancel-order-btn" onClick={() => handleDelete(order?._id)}>Cancel Order</button>
                                 </div>
                             </div>
                         </div>)

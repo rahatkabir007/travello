@@ -18,3 +18,11 @@
     border: 5px solid #fff;
     letter-spacing: 5px;
 }
+
+/* Mobile device */
+@media only screen and (max-width:688px){
+   .manage-orders-intro-section h1{
+       position: relative;
+       top: 40%;
+   }
+}

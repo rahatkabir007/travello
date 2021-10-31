@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Service from './service/Service';
 import './HomeServices.css';
+import { Spinner } from 'react-bootstrap';
 
 const HomeServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://gentle-coast-30847.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
+    if (services.length <= 0) {
+        return <div className="w-25 mx-auto text-center"><Spinner className="my-5 " animation="border" variant="success" /></div>
+
+
+    }
+
+
     return (
         <div className="services-section" id="services">
             <h1 className="text-center">Our Services</h1>
