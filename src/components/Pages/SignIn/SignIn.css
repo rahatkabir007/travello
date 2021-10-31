@@ -25,6 +25,11 @@
   
 }
 @media only screen and (max-width:688px){
+
+    .signin-section{
+        height: 60vh;
+         padding: 80px 0px;
+    }
     .signin-area-section {
         width: 100%;
         padding: 20px;

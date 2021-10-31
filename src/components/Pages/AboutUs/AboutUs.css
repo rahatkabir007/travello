@@ -17,6 +17,20 @@
     border: 5px solid #fff;
     letter-spacing: 5px;
 }
+.about-us{
+   line-height: 45px;
+}
+.about-us h1{
+    color: #00827b;
+    margin: 10px 0px;
+}
+.about-us hr{
+    width: 30%;
+    color: #00827b;
+}
+.about-us p{
+    font-size: 20px;
+}
 /* Mobile device */
 @media only screen and (max-width:688px){
 .aboutus-intro-section h1{
