@@ -1,13 +1,9 @@
-/* .placeOrder {
-    margin-bottom: -14px;
-} */
-
-.add-service-section {
+.my-orders-intro-section {
     background-color: #00827b;
     height: 50vh;
 }
 
-.add-service-section h1 {
+.my-orders-intro-section h1 {
     color: white;
     position: absolute;
     top: 30%;

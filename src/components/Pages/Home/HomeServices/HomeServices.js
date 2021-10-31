@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Service from './service/Service';
 import './HomeServices.css';
 
-const Services = () => {
+const HomeServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -24,4 +24,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default HomeServices;

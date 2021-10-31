@@ -13,21 +13,21 @@ const Destination = () => {
                 <div className="carousel-inner ">
                     <div className="carousel-item active destination-slider" >
                         <img src="https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                             <h5>India</h5>
                             <p>Taj Mahal</p>
                         </div>
                     </div>
                     <div className="carousel-item destination-slider">
                         <img src="https://images.pexels.com/photos/1531660/pexels-photo-1531660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                             <h5>Nepal</h5>
                             <p>Himalaya</p>
                         </div>
                     </div>
                     <div className="carousel-item destination-slider">
                         <img src="https://images.pexels.com/photos/9989554/pexels-photo-9989554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                             <h5>Bangladesh</h5>
                             <p>Cox's Bazar</p>
                         </div>
