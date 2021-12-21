@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+Website Live Link - https://travelo-db936.web.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My Website is about Travel Company. It mainly focuses on helping tourists to go to beautiful locations by booking website's services!
 
-## Available Scripts
+This was a really big project for me. Its completely full-stacked! I have designed this website with utmost care!
 
-In the project directory, you can run:
+I will break down my full website designing in 6 breakpoints.
 
-### `npm start`
+Client Side- 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+UI Designing
+-I have gotten my idea of the website from colorlib. I researched a lot of website to go perfectly with my taste.
+-I have divide my website in 6 pages excluding signin.
+-Each page has different contents.
+-The home page has different type of sections.
+-I have used Bootstarp cdn and react bootstrap to design the responsiveness of the UI.
+-Mostly used 2 colors throughout the website.
+-Every page has header and footer.
+-I have created a not found page too in case pages are not available.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Structure
+-I have divided the websites in to various components.
+-The src file have hooks, context and components in different folder.
+-The component folder has A main folder call pages. Where i have kept all of the Navs and their selective pages individually.
+-The Home folder has various child components on it!
+-Also i placed the privateroute folder in the signin component.
 
-### `npm test`
+Router
+-I have implemented react router dom.
+-This helps us to walk thorugh between different pages without reloadin.
+-I have placed the routes on app.js ! and wrapped them around Authcontext. Every route has there different loctions.
+-I have implemented dynamic route on the service section of the home page to redirect us to selected data's detailed information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Firebase Authentication
+-I have created a firebase project and hosted my files on it as an web app.
+-I have implemented only one authorization for my sign in which is Google Sign In.
+-The user information will be stored on my firebase project.
+-The header shows the users name everytime the user signs in.
 
-### `npm run build`
+Backend Side-
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Data
+-I have used node.js and express.js for the backend. And Connected My Backend server with MongoDB!
+-I have Created a project on mongodb and conneted it with my Backend using ID and Password.
+-I have done get, post and delete operation on the backend side.
+-This operations are connected with my client side.
+-At last I have hosted my website with Heroku. and used heroku live server link for my client side.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Functionality
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-The Website is mainly full stacked!
+-When users are not logged in they cant use the functionality as the navbar will only show 3 routes!
+-But once the user log is it will show 3 more routes also users can book any of the services from the website.
+-User can cancel the services they booked or placed.
+-User can also see which users have logged in and purchased which service on the Manage Order option. 
+-User can even add new services to the website. This is an admin fuctionaliy which we might learn later.
+-This website is responsive for both desktop and mobile.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was really important part to me! I really enjoyed doing it!
