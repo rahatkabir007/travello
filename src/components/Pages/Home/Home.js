@@ -5,6 +5,7 @@ import HomeServices from './HomeServices/HomeServices';
 import Facilities from './Facilities/Facilities';
 import HomeAbout from './HomeAbout/HomeAbout';
 import Review from './Review/Review';
+import ContactForm from './ContactForm/ContactForm';
 
 
 
@@ -17,6 +18,7 @@ const Home = () => {
             <Destination></Destination>
             <HomeServices></HomeServices>
             <Review></Review>
+            <ContactForm></ContactForm>
         </div>
     );
 };

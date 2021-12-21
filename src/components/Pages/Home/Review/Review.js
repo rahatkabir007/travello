@@ -6,8 +6,8 @@ const Review = () => {
     return (
         <div className="review-section my-3 container">
             <div id="carouselExampleControls" className="carousel slide p-5" data-bs-ride="carousel">
-                <div className="carousel-inner  p-3 h-75">
-                    <div className="carousel-item active p-4 ">
+                <div className="carousel-inner p-3 h-75">
+                    <div className="carousel-item active p-4">
                         <div className="row w-75 mx-auto">
                             <div className="col-lg-3 review-details p-5 mx-auto h-75 my-auto" id="left-detail">
                                 <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="d-block w-100 mx-auto" alt="..." />

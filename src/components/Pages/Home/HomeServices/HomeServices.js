@@ -3,6 +3,7 @@ import Service from './service/Service';
 import './HomeServices.css';
 import { Spinner } from 'react-bootstrap';
 
+
 const HomeServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
@@ -22,11 +23,13 @@ const HomeServices = () => {
             <h1 className="text-center">Our Services</h1>
             <hr />
             <div className="container">
-                <div className="row">
-                    {
-                        services.map(service => <Service key={service._id} service={service}></Service>)
-                    }
-                </div>
+             
+                    <div className="row">
+                        {
+                            services.map(service => <Service key={service._id} service={service}></Service>)
+                        }
+                    </div>
+             
             </div>
         </div>
     );

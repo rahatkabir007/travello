@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
 import useAuth from '../../../../hooks/useAuth';
-import Header from '../../../Shared/Header/Header';
 import './PlaceOrder.css';
 const PlaceOrder = () => {
     const { user } = useAuth();
@@ -24,15 +23,10 @@ const PlaceOrder = () => {
         fetch(`https://gentle-coast-30847.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setServiceDetails(data));
-    }, [])
+    }, [serviceId])
 
     return (
         <div className="placeOrder">
-            <div className="header-area">
-                <nav className="navbar navbar-expand-lg py-4 fixed-top">
-                    <Header></Header>
-                </nav>
-            </div>
             <div className="placeOrder-section">
                 <h1>Place Order</h1>
             </div>

@@ -1,5 +1,6 @@
 .service-card {
     border-radius: 10px;
+    height: 35rem !important;
 }
 
 .service-text {
