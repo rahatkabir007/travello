@@ -11,7 +11,7 @@ const PlaceOrder = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         console.log(data);
-        axios.post('https://gentle-coast-30847.herokuapp.com/orders', data)
+        axios.post('https://travelo.onrender.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Your Order Has Been Booked");
@@ -20,7 +20,7 @@ const PlaceOrder = () => {
             })
     }
     useEffect(() => {
-        fetch(`https://gentle-coast-30847.herokuapp.com/services/${serviceId}`)
+        fetch(`https://travelo.onrender.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setServiceDetails(data));
     }, [serviceId])

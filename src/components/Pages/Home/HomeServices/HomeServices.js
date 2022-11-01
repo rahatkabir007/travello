@@ -7,7 +7,7 @@ import { Spinner } from 'react-bootstrap';
 const HomeServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('https://gentle-coast-30847.herokuapp.com/services')
+        fetch('https://travelo.onrender.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -23,13 +23,13 @@ const HomeServices = () => {
             <h1 className="text-center">Our Services</h1>
             <hr />
             <div className="container">
-             
-                    <div className="row">
-                        {
-                            services.map(service => <Service key={service._id} service={service}></Service>)
-                        }
-                    </div>
-             
+
+                <div className="row">
+                    {
+                        services.map(service => <Service key={service._id} service={service}></Service>)
+                    }
+                </div>
+
             </div>
         </div>
     );

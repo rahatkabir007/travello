@@ -6,7 +6,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('https://gentle-coast-30847.herokuapp.com/orders')
+        fetch('https://travelo.onrender.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -17,7 +17,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to cancel your order?');
         if (proceed) {
-            const url = `https://gentle-coast-30847.herokuapp.com/orders/${id}`;
+            const url = `https://travelo.onrender.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
