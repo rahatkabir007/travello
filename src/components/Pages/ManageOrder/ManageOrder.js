@@ -5,7 +5,7 @@ import './ManageOrder.css'
 const ManageOrder = () => {
     const [manageOrders, setManageOrders] = useState([]);
     useEffect(() => {
-        fetch('https://travelo.onrender.com/orders')
+        fetch('https://travello-server-production.up.railway.app/orders')
             .then(res => res.json())
             .then(data => setManageOrders(data))
     }, [])
@@ -18,7 +18,7 @@ const ManageOrder = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete this order?');
         if (proceed) {
-            const url = `https://travelo.onrender.com/orders/${id}`;
+            const url = `https://travello-server-production.up.railway.app/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

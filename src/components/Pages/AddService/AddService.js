@@ -10,7 +10,7 @@ const AddService = () => {
 
     const onSubmit = (data) => {
         console.log(data);
-        axios.post('https://travelo.onrender.com/services', data)
+        axios.post('https://travello-server-production.up.railway.app/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Successfully Added");
