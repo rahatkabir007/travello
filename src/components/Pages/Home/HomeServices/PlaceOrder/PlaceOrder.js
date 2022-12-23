@@ -11,7 +11,7 @@ const PlaceOrder = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         console.log(data);
-        axios.post('https://travello-server-sage.vercel.app/orders', data)
+        axios.post('https://travelo.onrender.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Your Order Has Been Booked");
@@ -20,7 +20,7 @@ const PlaceOrder = () => {
             })
     }
     useEffect(() => {
-        fetch(`https://travello-server-sage.vercel.app/services/${serviceId}`)
+        fetch(`https://travelo.onrender.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setServiceDetails(data));
     }, [serviceId])
