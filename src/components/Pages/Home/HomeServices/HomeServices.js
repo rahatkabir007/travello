@@ -7,7 +7,7 @@ import { Spinner } from 'react-bootstrap';
 const HomeServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('https://travelo.onrender.com/services')
+        fetch('https://travello-server-sage.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

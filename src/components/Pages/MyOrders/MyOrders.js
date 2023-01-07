@@ -6,7 +6,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('https://travelo.onrender.com/orders')
+        fetch('https://travello-server-sage.vercel.app/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -17,7 +17,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to cancel your order?');
         if (proceed) {
-            const url = `https://travelo.onrender.com/orders/${id}`;
+            const url = `https://travello-server-sage.vercel.app/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
